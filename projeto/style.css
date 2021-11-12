@@ -1,51 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,600&family=Raleway:ital,wght@0,100;1,100&display=swap");
 
-:root{
-  font-family: 'Montserrat', sans-serif;;
+:root {
+  --fontePrimaria: "Montserrat", sans-serif;
+  --corPrimaria: #3f51f4;
+  --corSecundaria: #0193fd;
+  --fonteSecundaria: "Raleway", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--fontePrimaria);
+}
+
+.degrade {
+  width: 100%;
+  height: 100vh;
+  background: url(/img/main.png);
+  background-size: cover;
 }
 
 header {
-  position: relative;
-  background-color: #177cfa;
   width: 100%;
-  height: 100vh;
   font-weight: bold;
+  padding: 25px 5% 0 5%;
+  color: white;
 }
 
-header nav{
+header nav {
   display: flex;
+  justify-content: space-between;
 }
 
-header nav ul{
+header nav {
   display: flex;
+  align-items: center;
 }
 
-.custom-shape-divider-bottom-1636567939 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+header nav h3 {
+  font-style: italic;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  text-decoration: underline;
+  transition: all 5s;
+}
+
+header nav ul li:nth-child(7) {
+  margin-right: 0;
+}
+
+header nav ul li button {
+  width: 140px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: transparent;
+  border: 1px solid white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  color: white;
+}
+
+main {
+  padding: 10% 5% 0 5%;
+  max-height: 90vh;
+}
+
+main .conteudo {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+main .conteudo .grupo1 {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+main .conteudo .grupo1 h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  line-height: 60px;
+}
+
+main .conteudo .grupo1 p {
+  margin-bottom: 20px;
+  line-height: 23px;
+}
+
+/* main .conteudo .imgCasa {
+  width: 60%;
+  background: url(/img/kindpng_2190956\ 1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 539px;
+  top: 100px;
+  position: absolute;
+  right: 0px;
+} */
+
+main .conteudo .grupo1 .pesquisa {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+main .conteudo .grupo1 .pesquisa input {
+  width: 330px;
+  height: 35px;
+  border-radius: 33px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+main .conteudo .grupo1 .pesquisa i {
+  position: absolute;
+  right: 48%;
+}
+
+main section {
+  top: 0;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  z-index: 1;
+}
+
+main section .descricao {
+  width: 35%;
+}
+
+main section .descricao h2 {
+  color: var(--corSecundaria);
+  margin-bottom: 10px;
+}
+
+main section .descricao span {
+  color: var(--corPrimaria);
+}
+
+main section .descricao p {
+  font-size: 0.75em;
+  line-height: 17px;
+}
+
+main .descFooter button {
+  width: 140px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: transparent;
+  border: 1px solid var(--corPrimaria);
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  color: var(--corPrimaria);
+  margin-top: 15px;
+}
+
+main .descFooter {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fonteSecundaria);
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+main .descFooter .fim {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+main .descFooter .play {
+  background-color: #98d4ff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+main .descFooter .parteBotao p {
+  font-family: var(--fonteSecundaria);
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+main .descFooter .parteBotao .ligth {
+  font-family: var(--fonteSecundaria);
+  font-weight: lighter;
+  font-style: normal;
+}
+
+main .descFooter .fim span {
+  color: #3f51f4;
+}
+
+main .descFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+main .descFooter .play i {
+  color: var(--corSecundaria);
+  font-size: 30px;
+}
+
+/* .custom-shape-divider-bottom-1636567939 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1636567939 svg {
-    position: relative;
-    display: block;
-    width: calc(117% + 1.3px);
-    height: 235px;
-    transform: rotateY(180deg);
+  position: relative;
+  display: block;
+  width: calc(117% + 1.3px);
+  height: 295px;
+  transform: rotateY(180deg);
 }
 
 .custom-shape-divider-bottom-1636567939 .shape-fill {
-    fill: #cbe9ff;
+  fill: #cbe9ff;
 }
 
 .custom-shape-divider-bottom-1636567001 {
@@ -62,7 +262,7 @@ header nav ul{
   position: relative;
   display: block;
   width: calc(117% + 1.3px);
-  height: 170px;
+  height: 260px;
   transform: rotateY(180deg);
 }
 
@@ -71,27 +271,54 @@ header nav ul{
 }
 
 .custom-shape-divider-bottom-1636568003 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1636568003 svg {
-    position: relative;
-    display: block;
-    width: calc(117% + 1.3px);
-    height: 265px;
-    transform: rotateY(180deg);
+  position: relative;
+  display: block;
+  width: calc(117% + 1.3px);
+  height: 325px;
+  transform: rotateY(180deg);
 }
 
 .custom-shape-divider-bottom-1636568003 .shape-fill {
-    fill: #98d4ff;
+  fill: #98d4ff;
+} */
+
+.teste{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
 }
 
-header img{
-    width: 50%;
+.teste .onda1{
+  width: 100%;
+  height: 100%;
+  background: url(/img/onda\ 1.png) no-repeat;
+  background-size: contain;
+  position: relative;  
+}
+
+.teste .onda2{
+  width: 100%;
+  height: 100%;
+  background: url(/img/onda\ 2.png) no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.teste .onda3{
+  width: 100%;
+  height: 100%;
+  background: url(/img/onda\ 3.png) no-repeat;
+  background-size: contain;
+  position: relative;
 }
